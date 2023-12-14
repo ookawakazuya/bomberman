@@ -5,16 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
-    private GameObject bombs;
+    [SerializeField] GameObject bombs;
+    private bool death;
     // Start is called before the first frame update
     void Start()
     {
-        
+        death = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //playerÇÃìÆÇ´
         if (Input.GetKey(KeyCode.A))
         {
             transform.position -= transform.right * speed * Time.deltaTime;
@@ -31,9 +33,28 @@ public class Player : MonoBehaviour
         {
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
+
+        //É{ÉÄÇÃê∂ê¨
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            DropBomb();
+        }
+
+        //éÄÇÒÇæÇ©
+
+    }
+
+    private void DropBomb()
+    {
+        var pos = new Vector3
+        (
+            Mathf.RoundToInt(transform.position.x),
+            bombs.transform.position.y,
+            Mathf.RoundToInt(transform.position.z)
+         );
+        if (bombs)
+        {
+            Instantiate(bombs,pos,bombs.transform.rotation);
         }
     }
 }
