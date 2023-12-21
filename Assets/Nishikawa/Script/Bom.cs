@@ -27,7 +27,7 @@ public class Bom : MonoBehaviour
         Instantiate(explodePrefab, transform.position, Quaternion.identity);
         // ”š’e‚ğ”ñ•\¦‚É‚·‚é
         GetComponent<MeshRenderer>().enabled = false;
-        transform.Find("Collider").gameObject.SetActive(false);
+        transform.Find("Sphere").gameObject.SetActive(false);
 
         // 0.3•bŒã‚É”ñ•\¦‚É‚µ‚½”š’e‚ğíœ
         Destroy(gameObject, 0.3f);
