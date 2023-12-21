@@ -6,15 +6,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
-    private bool death;
+    private bool alive = true;
     // Start is called before the first frame update
     void Start()
     {
-        death = false;
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    void UpdateAlive()
     {
         //player‚Ì“®‚«
         if (Input.GetKey(KeyCode.A))
@@ -39,9 +38,18 @@ public class Player : MonoBehaviour
         {
             DropBomb();
         }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (alive)
+        {
+            UpdateAlive();
+        }
+        else
+        {
 
-        //Ž€‚ñ‚¾‚©
-
+        }
     }
 
     private void DropBomb()
