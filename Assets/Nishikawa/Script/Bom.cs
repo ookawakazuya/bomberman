@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bom : MonoBehaviour
 {
     [SerializeField] GameObject explodePrefab; // 爆発エフェクトのプレハブ
-    private LayerMask leveMask; // ステージのレイヤー
+    [SerializeField] LayerMask leveMask; // ステージのレイヤー
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,14 @@ public class Bom : MonoBehaviour
         Instantiate(explodePrefab, transform.position, Quaternion.identity);
         // 爆弾を非表示にする
         GetComponent<MeshRenderer>().enabled = false;
-        transform.Find("Sphere").gameObject.SetActive(false);
+
+        // 爆風を広げる
+        StartCoroutine(CreateExplosins(Vector3.forward));
+        StartCoroutine(CreateExplosins(Vector3.right));
+        StartCoroutine(CreateExplosins(Vector3.back));
+        StartCoroutine(CreateExplosins(Vector3.left));
+
+        transform.Find("SphereCollider").gameObject.SetActive(false);
 
         // 0.3秒後に非表示にした爆弾を削除
         Destroy(gameObject, 0.3f);
