@@ -487,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   bombs: {fileID: 7224848197060232531, guid: d869ba9752f0a9c419b4fb5988097d7f, type: 3}
+  WallPrefabs: []
 --- !u!136 &1250096624
 CapsuleCollider:
   m_ObjectHideFlags: 0

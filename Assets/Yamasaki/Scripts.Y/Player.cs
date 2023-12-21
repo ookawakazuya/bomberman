@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
     private bool alive = true;
+    [SerializeField] GameObject[] WallPrefabs;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +18,7 @@ public class Player : MonoBehaviour
 
     void UpdateAlive()
     {
+        Vector3 d = transform.localPosition - transform.position;
         //player‚Ì“®‚«
         if (Input.GetKey(KeyCode.A))
         {
