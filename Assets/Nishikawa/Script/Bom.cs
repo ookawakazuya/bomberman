@@ -25,6 +25,7 @@ public class Bom : MonoBehaviour
     {
         // 爆弾の位置に爆発エフェクトを作成
         Instantiate(explodePrefab, transform.position, Quaternion.identity);
+
         // 爆弾を非表示にする
         GetComponent<MeshRenderer>().enabled = false;
 
