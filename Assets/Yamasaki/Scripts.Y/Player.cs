@@ -7,8 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
     private bool alive = true;
-    [SerializeField] GameObject Wall1;
-    [SerializeField] GameObject Wall2;
 
 
     // Start is called before the first frame update
@@ -46,8 +44,8 @@ public class Player : MonoBehaviour
     }
     void IsAlive()
     {
-        Debug.Log("Ç¢Ç´ÇƒÇ‹Ç∑ÅB");
-        Vector3 d1 = Wall1.transform.position - transform.localPosition;
+        //Debug.Log("Ç¢Ç´ÇƒÇ‹Ç∑ÅB");
+        /*Vector3 d1 = Wall1.transform.position - transform.localPosition;
         Vector3 d2 = Wall2.transform.position - transform.localPosition;
         float len1 = d1.magnitude;
         float len2 = d2.magnitude;
@@ -59,6 +57,16 @@ public class Player : MonoBehaviour
         {
             alive = false;
             Debug.Log("éÄÇ…Ç‹ÇµÇΩ");
+        }*/
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.name == "LimitWall")
+        {
+            Debug.Log("êGÇÍÇΩ");
+            alive = false;
+            Debug.Log("éÄÇÒÇæ");
         }
     }
     // Update is called once per frame
