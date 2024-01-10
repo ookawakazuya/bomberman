@@ -42,23 +42,7 @@ public class Player : MonoBehaviour
             DropBomb();
         }
     }
-    void IsAlive()
-    {
-        //Debug.Log("Ç¢Ç´ÇƒÇ‹Ç∑ÅB");
-        /*Vector3 d1 = Wall1.transform.position - transform.localPosition;
-        Vector3 d2 = Wall2.transform.position - transform.localPosition;
-        float len1 = d1.magnitude;
-        float len2 = d2.magnitude;
-        float sumR1x = transform.localScale.x / 2.0f + Wall1.transform.localScale.x / 2.0f;
-        float sumR2x = transform.localScale.x / 2.0f + Wall2.transform.localScale.x / 2.0f;
-        float sumR1z = transform.localScale.z / 2.0f + Wall1.transform.localScale.z / 2.0f;
-        float sumR2z = transform.localScale.z / 2.0f + Wall2.transform.localScale.z / 2.0f;
-        if ((len1 <= sumR1x && len1 <= sumR1z) || (len2 <= sumR2x && len2 <= sumR2z))
-        {
-            alive = false;
-            Debug.Log("éÄÇ…Ç‹ÇµÇΩ");
-        }*/
-    }
+
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -74,7 +58,6 @@ public class Player : MonoBehaviour
     {
         if (alive)
         {
-            IsAlive();
             UpdateAlive();
         }
         else
