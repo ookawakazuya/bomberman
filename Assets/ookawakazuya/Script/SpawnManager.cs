@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
             int number = Random.Range(0, Prefabs.Length);
             Instantiate(Prefabs[number], new Vector3(-21, -1, 0), Prefabs[number].transform.rotation);
         }
-        // if (playerControllerScript.gameOver == false)
+        // if (playerController.gameOver == false)
     }
     void Update()
     {

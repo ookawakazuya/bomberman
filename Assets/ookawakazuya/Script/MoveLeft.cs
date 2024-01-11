@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     [SerializeField]private float speed = 1;
-   // private PlayerController playerControllerScript;
+    private Player playerController;
     void Start()
     {
         //playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -14,7 +14,7 @@ public class MoveLeft : MonoBehaviour
     [SerializeField]private float leftBound = 0;
     void Update()
     {
-        //if (playerControllerScript.gameOver == false)
+        //if (playerController.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }

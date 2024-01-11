@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8189346650187828300}
   - component: {fileID: 834948371327799164}
   - component: {fileID: 8365220500883689499}
-  - component: {fileID: 4610379245900320979}
   - component: {fileID: 162094876306150458}
+  - component: {fileID: -5452690037911547417}
   m_Layer: 0
   m_Name: breakWall
   m_TagString: Wall
@@ -107,20 +107,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4610379245900320979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9219505862225765368}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec93561845cf964ca3668579a50508b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  leftBound: -20
 --- !u!54 &162094876306150458
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,3 +134,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5452690037911547417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219505862225765368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2ad3fad76d89b4bafd7ef0952232ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectPrefab: {fileID: 0}
