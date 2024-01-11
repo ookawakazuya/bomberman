@@ -6,7 +6,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
-    private bool alive = true;
+    public bool alive = true;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,7 @@ public class Player : MonoBehaviour
 
     void UpdateAlive()
     {
+
         //playerÇÃìÆÇ´
         if (Input.GetKey(KeyCode.A))
         {
@@ -39,6 +42,21 @@ public class Player : MonoBehaviour
             DropBomb();
         }
     }
+    void Dead()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.name == "LimitWall")
+        {
+            Debug.Log("êGÇÍÇΩ");
+            alive = false;
+            Debug.Log("éÄÇÒÇæ");
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,7 +66,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-
+            Dead();
         }
     }
 
