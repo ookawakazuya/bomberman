@@ -8,18 +8,22 @@ public class WallDestroy : MonoBehaviour
     /// 衝突した時
     /// </summary>
     /// <param name="collision"></param>
-    [SerializeField] private float speed = 30;
+
+    public GameObject effectPrefab;
+
     private void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * speed);
+
     }
-    private void OnTriggerEnter(Collider collider)
+    private void OnTriggerEnter(Collider other)
     {
-		//衝突したときに相手にWallタグが付いているとき
-        if (collider.gameObject.tag == "DestroyWall")
+        //衝突したときに相手にWallタグが付いているとき
+        if (other.CompareTag("Explosion"))
         {
-			//5秒後に消える
-            Destroy(gameObject,3.0f);
+            //1秒後に消滅
+            Destroy(gameObject);
+            GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
+            Destroy(effect, 0.5f);
         }
     }
 }
