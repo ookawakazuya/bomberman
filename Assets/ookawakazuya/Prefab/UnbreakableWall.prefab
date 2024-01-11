@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1796378087864701982}
   - component: {fileID: 8875857514931410828}
   - component: {fileID: 5067616985177550460}
-  - component: {fileID: 7136014121150138194}
   - component: {fileID: 3102688077626417357}
   m_Layer: 0
   m_Name: UnbreakableWall
@@ -101,26 +100,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7136014121150138194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4206548939947300005}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec93561845cf964ca3668579a50508b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  leftBound: -20
 --- !u!54 &3102688077626417357
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,5 +131,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0

@@ -18,10 +18,6 @@ public class MoveLeft : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
-        if(transform.position.x< leftBound && gameObject.CompareTag("DestroyWall"))
-        {
-            Destroy(gameObject);
-        }
     }
 
     //壊れないブロックや壊されなかったブロックを消す

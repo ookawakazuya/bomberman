@@ -22,8 +22,8 @@ public class WallDestroy : MonoBehaviour
         {
             //1ïbå„Ç…è¡ñ≈
             Destroy(gameObject);
-            GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-            Destroy(effect, 0.5f);
+            //GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
+            //Destroy(effect, 0.5f);
         }
     }
 }
