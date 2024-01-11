@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
-    private bool alive = true;
+    public bool alive = true;
 
 
     // Start is called before the first frame update
@@ -42,6 +42,10 @@ public class Player : MonoBehaviour
             DropBomb();
         }
     }
+    void Dead()
+    {
+        Destroy(gameObject);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -62,7 +66,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.Log("Ž€‚É‚Ü‚µ‚½");
+            Dead();
         }
     }
 

@@ -514,7 +514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  bombs: {fileID: 7224848197060232531, guid: d869ba9752f0a9c419b4fb5988097d7f, type: 3}
+  bombs: {fileID: 5599357729115382772, guid: 117b52f2ac8fb6143a9253602b8aba9e, type: 3}
+  alive: 1
 --- !u!136 &1250096624
 CapsuleCollider:
   m_ObjectHideFlags: 0
