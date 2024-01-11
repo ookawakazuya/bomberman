@@ -28,18 +28,20 @@ public class ScoreManager : MonoBehaviour
             time = 0;
             score_num += 100;
         }
-        
+
         /*if(ブロックが壊されたら)//合わせたら書く
         {
             score_num += 300;
         }*/
 
-        if(score_num >= 500)//合わせるとき条件式を(プレイヤーが死んだらにする)
+
+        if (score_num >= 500) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
         {
             SceneManager.LoadScene("result");
         }
 
     }
+
 
     public static int getscore_num()
     {
