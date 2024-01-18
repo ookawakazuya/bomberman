@@ -7,6 +7,8 @@ public class Bom : MonoBehaviour
     [SerializeField] GameObject explodePrefab; // 爆発エフェクトのプレハブ
     [SerializeField] LayerMask leveMask; // ステージのレイヤー
 
+    private bool exploded = false; // すでに爆発している場合 = true
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,8 @@ public class Bom : MonoBehaviour
 
         // 爆弾を非表示にする
         GetComponent<MeshRenderer>().enabled = false;
+        // 爆発した
+        exploded = true;
 
         // 爆風を広げる
         StartCoroutine(CreateExplosins(Vector3.forward));
@@ -35,7 +39,15 @@ public class Bom : MonoBehaviour
         StartCoroutine(CreateExplosins(Vector3.back));
         StartCoroutine(CreateExplosins(Vector3.left));
 
-        transform.Find("SphereCollider").gameObject.SetActive(false);
+        Transform sphereColliderTransform = transform.Find("SphereCollider");
+        if (sphereColliderTransform != null)
+        {
+            sphereColliderTransform.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("SphereCollider not found!");
+        }
 
         // 0.3秒後に非表示にした爆弾を削除
         Destroy(gameObject, 0.3f);
@@ -67,6 +79,20 @@ public class Bom : MonoBehaviour
 
             // 0.05秒待ってから、次のマスに爆風を広げる
             yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    // 他のオブジェクトがこの爆弾に当たったら呼び出される
+    void OnTriggerEnter(Collider other)
+    {
+        // まだ爆発していない、かつ、この爆弾にぶつかったオブジェクトが爆発エフェクトの場合
+        if (!exploded && other.CompareTag("Explosion"))
+        {
+            // 2重に爆発処理が実行されないようにすでに爆発処理が実行されている場合は止める
+            CancelInvoke("Explode");
+
+            // 爆発する
+            Explode();
         }
     }
 }
