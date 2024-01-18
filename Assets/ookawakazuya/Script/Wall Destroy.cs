@@ -18,16 +18,20 @@ public class WallDestroy : MonoBehaviour
     //爆発でブロックを消す
     public void OnTriggerEnter(Collider collider)
     {
-        //衝突したときに相手にWallタグが付いているとき
-        if (collider.CompareTag("Explosion"))
+        //触れた時、自身に対応するタグが付いていた場合
+        if (gameObject.name == "breakWall")
         {
-            //1秒後に消滅
-            Destroy(gameObject);
-            Debug.Log("爆散");
-            //GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-            //Destroy(effect, 0.5f);
+            //衝突したときに相手にExplosionタグが付いているとき
+            if (collider.CompareTag("Explosion"))
+            {
+                //1秒後に消滅
+                Destroy(gameObject);
+                Debug.Log("爆散");
+                //GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
+                //Destroy(effect, 0.5f);
+            } 
         }
-        //衝突したときに相手にWallタグが付いているときに
+        //衝突したときに相手にDestroyWallタグが付いているときに
         else if (collider.gameObject.tag == "DestroyWall")
         {   //このオブジェクトを消滅させる
             Destroy(gameObject, 2f);

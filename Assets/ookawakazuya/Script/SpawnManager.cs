@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
         {
             //オブジェクトが生成される位置
             int number = Random.Range(0, Prefabs.Length);
-            Instantiate(Prefabs[number], new Vector3(-21, -1, 0), Prefabs[number].transform.rotation);
+            Instantiate(Prefabs[number], new Vector3(-21, 0, 0), Prefabs[number].transform.rotation);
         }
         // if (playerController.gameOver == false)
     }
