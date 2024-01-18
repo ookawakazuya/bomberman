@@ -38,7 +38,7 @@ public class Bom : MonoBehaviour
         StartCoroutine(CreateExplosins(Vector3.right));
         StartCoroutine(CreateExplosins(Vector3.back));
         StartCoroutine(CreateExplosins(Vector3.left));
-
+        
         Transform sphereColliderTransform = transform.Find("SphereCollider");
         if (sphereColliderTransform != null)
         {

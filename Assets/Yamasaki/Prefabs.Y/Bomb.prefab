@@ -58,35 +58,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6770778321111131691}
-    - targetCorrespondingSourceObject: {fileID: 100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2184661565100986532}
     - targetCorrespondingSourceObject: {fileID: 100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6315557945624089120}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5264445859926817340}
   m_SourcePrefab: {fileID: 100100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
 --- !u!1 &5599357729115382772 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: c4bdfab5b24f3f54d9046920fcbdf5a6, type: 3}
   m_PrefabInstance: {fileID: 5599357729115415892}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6770778321111131691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5599357729115382772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b757832b315d6db4e80808211009231d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 7186208284856314618, guid: a7d9a7d3634f5e440bc9d72b18278969, type: 3}
-  levelMask:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!54 &2184661565100986532
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +119,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.0068047554
   m_Center: {x: 0, y: 0, z: 0.0014776567}
+--- !u!114 &5264445859926817340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599357729115382772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eafe040d1cb394585d2310db9f428c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explodePrefab: {fileID: 177540, guid: 69dfce71c987ee94ebd40421847e3c8e, type: 3}
+  leveMask:
+    serializedVersion: 2
+    m_Bits: 0
