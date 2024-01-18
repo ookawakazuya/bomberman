@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -89,6 +90,14 @@ public class Bomb : MonoBehaviour
             CancelInvoke("Explode");
 
             // ”š”­‚·‚é
+            Explode();
+        }
+    }
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Explosion"))
+        {
+            CancelInvoke("Explode");
             Explode();
         }
     }

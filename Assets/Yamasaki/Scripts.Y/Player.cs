@@ -57,6 +57,13 @@ public class Player : MonoBehaviour
             Debug.Log("Ž€‚ñ‚¾");
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Explosion"))
+        {
+            alive = false;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
