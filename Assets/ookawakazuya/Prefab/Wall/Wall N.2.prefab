@@ -157,7 +157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (1)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (5)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (4)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -471,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (2)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (3)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -657,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
-      value: breakWall (6)
+      value: breakWall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
