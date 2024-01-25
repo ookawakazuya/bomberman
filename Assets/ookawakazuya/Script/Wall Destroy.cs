@@ -32,16 +32,6 @@ public class WallDestroy : MonoBehaviour
                 //player.ultpoint++;
             }
         }
-        else if (gameObject.name == "breakWall 1")
-        {
-            //衝突したときに相手にExplosionタグが付いているとき
-            if (collider.CompareTag("Explosion"))
-            {
-                //1秒後に消滅
-                Destroy(gameObject);
-                //player.ultpoint++;
-            }
-        }
         //衝突したときに自信の名前がbreakWall+1だった場合
         else if(gameObject.name == "breakWall+1")
         {
@@ -59,7 +49,7 @@ public class WallDestroy : MonoBehaviour
             }
         }
         //衝突したときに相手にDestroyWallタグが付いているときに
-        else if (collider.gameObject.tag == "DestroyWall")
+        if (collider.gameObject.tag == "DestroyWall")
         {   //このオブジェクトを消滅させる
             Destroy(gameObject, 2f);
         }
