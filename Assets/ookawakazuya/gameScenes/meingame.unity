@@ -731,7 +731,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -55.8, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -898,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -47.7, y: 12.65, z: -0.54}
+  m_LocalPosition: {x: -52, y: 12.65, z: -1.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1009,6 +1009,11 @@ MonoBehaviour:
   - {fileID: 8526067914140749357, guid: f0813519866c5fe41b61dd2a190fe62b, type: 3}
   - {fileID: 1476623871523192308, guid: 4a14069e3c131f04397be7ca30c31a14, type: 3}
   - {fileID: 2671200186287671240, guid: 5eb8eed1d8c9a6f43b31671d416ce710, type: 3}
+  Prefabs2:
+  - {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+  - {fileID: 9219505862225765368, guid: 61386c6560147f4418996cca5ea2fc87, type: 3}
+  - {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+  count: 0
 --- !u!4 &1469552800
 Transform:
   m_ObjectHideFlags: 0
@@ -1175,7 +1180,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 124
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1690557632
 MonoBehaviour:
