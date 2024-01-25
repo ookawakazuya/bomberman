@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bom : MonoBehaviour
+public class Bom2 : MonoBehaviour
 {
     [SerializeField] GameObject explodePrefab; // 爆発エフェクトのプレハブ
     [SerializeField] LayerMask leveMask; // ステージのレイヤー
@@ -19,7 +19,7 @@ public class Bom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     // 爆弾が爆発する時の処理
@@ -34,10 +34,10 @@ public class Bom : MonoBehaviour
         exploded = true;
 
         // 爆風を広げる
-        StartCoroutine(CreateExplosins(Vector3.forward));
-        StartCoroutine(CreateExplosins(Vector3.right));
-        StartCoroutine(CreateExplosins(Vector3.back));
-        StartCoroutine(CreateExplosins(Vector3.left));
+        StartCoroutine(CreateExplosins(new Vector3(1,0,1)));
+        StartCoroutine(CreateExplosins(new Vector3(-1,0,1)));
+        StartCoroutine(CreateExplosins(new Vector3(-1,0,-1)));
+        StartCoroutine(CreateExplosins(new Vector3(1,0,-1)));
 
         Transform sphereColliderTransform = transform.Find("SphereCollider");
         if (sphereColliderTransform != null)
@@ -79,7 +79,7 @@ public class Bom : MonoBehaviour
                 // 爆風はこれ以上広げない
                 break;
             }
-            
+
             // 0.05秒待ってから、次のマスに爆風を広げる
             yield return new WaitForSeconds(0.05f);
         }

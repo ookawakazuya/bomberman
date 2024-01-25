@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7341800533102968781}
   - component: {fileID: 1076756807606817112}
   - component: {fileID: 7888632557331728822}
-  - component: {fileID: 6514157007086755021}
+  - component: {fileID: -1508249257867125105}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6514157007086755021
+--- !u!114 &-1508249257867125105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
