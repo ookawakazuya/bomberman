@@ -365,7 +365,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
-      value: UnbreakableWall  (4)
+      value: UnbreakableWall
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -427,7 +427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
-      value: UnbreakableWall  (5)
+      value: UnbreakableWall
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,7 +489,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
-      value: UnbreakableWall  (3)
+      value: UnbreakableWall
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,7 +675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
-      value: UnbreakableWall  (2)
+      value: UnbreakableWall
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,7 +737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
-      value: UnbreakableWall  (1)
+      value: UnbreakableWall
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x

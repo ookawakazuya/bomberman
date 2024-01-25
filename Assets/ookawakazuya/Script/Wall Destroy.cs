@@ -10,15 +10,18 @@ public class WallDestroy : MonoBehaviour
     /// <param name="collision"></param>
 
     public GameObject effectPrefab;
+    public int breakcount;
+    private Player player;
 
-    private void Update()
+    private void Start()
     {
-
+        breakcount = 0;
+        player = GameObject.Find("Player").GetComponent<Player>();
     }
     //爆発でブロックを消す
     public void OnTriggerEnter(Collider collider)
     {
-        //触れた時、自身に対応するタグが付いていた場合
+        //触れた時、自身の名前がbreakWallだった場合
         if (gameObject.name == "breakWall")
         {
             //衝突したときに相手にExplosionタグが付いているとき
@@ -26,16 +29,39 @@ public class WallDestroy : MonoBehaviour
             {
                 //1秒後に消滅
                 Destroy(gameObject);
-                Debug.Log("爆散");
-                //GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-                //Destroy(effect, 0.5f);
-            } 
+                //player.ultpoint++;
+            }
+        }
+        else if (gameObject.name == "breakWall 1")
+        {
+            //衝突したときに相手にExplosionタグが付いているとき
+            if (collider.CompareTag("Explosion"))
+            {
+                //1秒後に消滅
+                Destroy(gameObject);
+                //player.ultpoint++;
+            }
+        }
+        //衝突したときに自信の名前がbreakWall+1だった場合
+        else if(gameObject.name == "breakWall+1")
+        {
+            //衝突したときに相手にExplosionタグが付いているとき
+            if (collider.CompareTag("Explosion"))
+            { 
+                //カウントを1追加する
+                breakcount++;
+                Debug.Log("+1");
+                if(breakcount >= 2)
+                {
+                    Destroy(gameObject);
+                    //player.ultpoint++;
+                }
+            }
         }
         //衝突したときに相手にDestroyWallタグが付いているときに
         else if (collider.gameObject.tag == "DestroyWall")
         {   //このオブジェクトを消滅させる
             Destroy(gameObject, 2f);
-            Debug.Log("消滅");
         }
     }
 }
