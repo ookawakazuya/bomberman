@@ -39,10 +39,10 @@ public class Bom : MonoBehaviour
         StartCoroutine(CreateExplosins(Vector3.back));
         StartCoroutine(CreateExplosins(Vector3.left));
 
-        Transform sphereColliderTransform = transform.Find("SphereCollider");
-        if (sphereColliderTransform != null)
+        Transform ColliderTransform = transform.Find("Collider");
+        if (ColliderTransform != null)
         {
-            sphereColliderTransform.gameObject.SetActive(false);
+            ColliderTransform.gameObject.SetActive(false);
         }
         else
         {
@@ -66,6 +66,7 @@ public class Bom : MonoBehaviour
             // îöïóÇçLÇ∞ÇΩêÊÇ…âΩÇ©ë∂ç›Ç∑ÇÈÇ©ämîF
             Physics.Raycast
             (transform.position + new Vector3(0, 0.5f, 0), direction, out hit, i, leveMask);
+            Debug.LogWarning("Block OK!");
 
             if (!hit.collider)
             {
