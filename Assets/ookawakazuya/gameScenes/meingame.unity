@@ -402,7 +402,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &362383192
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1141,6 +1141,7 @@ MonoBehaviour:
   - {fileID: 9219505862225765368, guid: 61386c6560147f4418996cca5ea2fc87, type: 3}
   - {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
   count: 0
+  Leveltext: {fileID: 362383191}
 --- !u!4 &1469552800
 Transform:
   m_ObjectHideFlags: 0

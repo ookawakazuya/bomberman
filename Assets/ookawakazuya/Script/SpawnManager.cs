@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] Prefabs;
@@ -11,20 +11,22 @@ public class SpawnManager : MonoBehaviour
     private Player player;
     public int count;
     //private int number;
+    [SerializeField] Text Leveltext;
 
     void Start()
     {
-        count = 19;
+        count = 0;
         // オブジェクトを生成する機構
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         player = GameObject.Find("Player").GetComponent<Player>();
+        StartCoroutine("Level1");
     }
 
     void SpawnObstacle()
     {
         if (player.alive == true)
         {
-            if(count <= 20) 
+            if(count <= 19) 
             { 
                 //オブジェクトが生成される位置
                 int number = Random.Range(0, Prefabs.Length);
@@ -32,7 +34,7 @@ public class SpawnManager : MonoBehaviour
                 count++;
             }
             //配列をランダムな順で生成する
-            else if(count >= 21)
+            else if(count >= 20)
             {
                 int number = Random.Range(0,Prefabs2.Length);
                 int number1 = Random.Range(0, Prefabs2.Length);
@@ -65,6 +67,21 @@ public class SpawnManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if (count == 21)
+        {
+            StartCoroutine("Level2");
+        }
+    }
+    IEnumerator Level1()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Leveltext.text = "Level1";
+    }
+
+    IEnumerator Level2()
+    {
+        Leveltext.text = "";
+        yield return new WaitForSeconds(0.5F);
+        Leveltext.text = "Lvel2";
     }
 }

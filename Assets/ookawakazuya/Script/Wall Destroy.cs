@@ -69,7 +69,7 @@ public class WallDestroy : MonoBehaviour
     {
         reloading = true;
         Debug.Log("待機時間開始");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
 
         //カウントを1追加する
         breakcount++;
