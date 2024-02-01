@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] Prefabs;
     public GameObject[] Prefabs2;
-    private float startDelay = 4;
-    private float repeatRate = 4;
+    private float startDelay = 2;
+    private float repeatRate = 5;
     private Player player;
     public int count;
     //private int number;
