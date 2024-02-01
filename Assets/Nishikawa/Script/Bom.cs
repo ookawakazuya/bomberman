@@ -46,7 +46,7 @@ public class Bom : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("SphereCollider not found!");
+            Debug.LogWarning("Collider not found!");
         }
 
         // 0.3•bŒã‚É”ñ•\¦‚É‚µ‚½”š’e‚ğíœ
