@@ -13,7 +13,7 @@ public class resultScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score_num = ScoreManager.getscore_num();
+        score_num = ScoreManeger.getscore_num();
         for (int i = 0; i < RankingManager.instance.scores.Count; i++)
         {
             int score = RankingManager.instance.scores[i];
@@ -28,5 +28,6 @@ public class resultScore : MonoBehaviour
     void Update()
     {
         //ランクインした場合のアニメーションとか
+       
     }
 }

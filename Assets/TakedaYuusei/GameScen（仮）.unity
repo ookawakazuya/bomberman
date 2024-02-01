@@ -305,6 +305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RankingManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8049704966176570303, guid: 305e629a1e5604c448bb2e2c42e759e7, type: 3}
+      propertyPath: scores.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8144401419372135061, guid: 305e629a1e5604c448bb2e2c42e759e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.656342

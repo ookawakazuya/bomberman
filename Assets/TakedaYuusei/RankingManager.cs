@@ -36,7 +36,7 @@ public class RankingManager : MonoBehaviour
     public void AddScore(int value)
     {
         scores.Add(value);
-        // sort
+        //sort
         //int[] sco = {3,1,5,4,2};
         //var list = new List<int>();
 

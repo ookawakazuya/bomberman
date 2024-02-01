@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;  
 using UnityEngine.SceneManagement;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManeger : MonoBehaviour
 {
     public GameObject score_object = null; // Text
     public static int score_num = 0; // スコア変数
@@ -32,15 +32,16 @@ public class ScoreManager : MonoBehaviour
         if (score_num >= 500) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
         {
             RankingManager.instance.AddScore(score_num);
-            Invoke("Deray", 2.0f);
+            Invoke("Deray", 2.0f);//スコアが加算されるまでの空白時間
             alive = false;
 
         }
 
-        if (time >= 100)//スコア加算
+        if (time >= 1)//スコア加算
         {
             time = 0;
-            score_num += 1;
+            score_num += 100;
+
         }
 
         score_text.text = "Score:" + score_num;
