@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        count = 20;
+        count = 21;
         // オブジェクトを生成する機構
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -31,9 +31,9 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(Prefabs[number], new Vector3(-21, 0, 0), Prefabs[number].transform.rotation);
                 count++;
             }
+            //配列をランダムな順で生成する
             else if(count >= 21)
             {
-         
                 int number = Random.Range(0,Prefabs2.Length);
                 int number1 = Random.Range(0, Prefabs2.Length);
                 int number2 = Random.Range(0, Prefabs2.Length);
@@ -62,7 +62,6 @@ public class SpawnManager : MonoBehaviour
 
             }
         }
-        // if (playerController.gameOver == false)
     }
     void Update()
     {
