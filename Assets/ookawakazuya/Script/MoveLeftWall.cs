@@ -23,12 +23,17 @@ public class MoveLeftWall : MonoBehaviour
         //プレイヤーが消滅したときにオブジェクトの生成を終了させる
         if (player.alive == true)
         {
-            if(spawnmanager.count == 21)
+            if(spawnmanager.count > 21)
             {
                 speed = 1;
                 transform.Translate(Vector3.left * Time.deltaTime * speed);
+                if (spawnmanager.count % 20 == 0)
+                {
+                    speed++;
+                }
             }
             
         }
     }
 }
+

@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        count = 21;
+        count = 19;
         // オブジェクトを生成する機構
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         player = GameObject.Find("Player").GetComponent<Player>();
@@ -59,7 +59,7 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(Prefabs2[number10],new Vector3(-21,1,-5),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number11],new Vector3(-21,1,-6),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number12],new Vector3(-21,1,-7),Prefabs2[number].transform.rotation);
-
+                count++;
             }
         }
     }
