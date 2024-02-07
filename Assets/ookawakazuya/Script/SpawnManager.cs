@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] Prefabs;
     public GameObject[] Prefabs2;
-    private float startDelay = 2;
-    private float repeatRate = 5;
+    private float startDelay=2;
+    private float repeatRate=5;
     private Player player;
     public int count;
     //private int number;
@@ -21,6 +21,7 @@ public class SpawnManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         StartCoroutine("Level1");
     }
+
 
     void SpawnObstacle()
     {
@@ -70,6 +71,11 @@ public class SpawnManager : MonoBehaviour
         if (count == 21)
         {
             StartCoroutine("Level2");
+        }
+        if (count >= 30)
+        {
+            startDelay = 0;
+            repeatRate = 3;
         }
     }
     IEnumerator Level1()
