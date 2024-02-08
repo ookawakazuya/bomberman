@@ -898,7 +898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.374786}
+  m_AnchoredPosition: {x: 0, y: -9.374756}
   m_SizeDelta: {x: 0, y: 24.7495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740193639
@@ -1323,8 +1323,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  bombs: {fileID: 5599357729115382772, guid: 117b52f2ac8fb6143a9253602b8aba9e, type: 3}
+  bombs: {fileID: 3869253665498228344, guid: 098557977090acf48ac99818e4b24332, type: 3}
+  ultimate: {fileID: 0}
   alive: 1
+  ultpoint: 0
 --- !u!136 &1690557633
 CapsuleCollider:
   m_ObjectHideFlags: 0

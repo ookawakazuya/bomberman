@@ -121,4 +121,4 @@ MonoBehaviour:
   explodePrefab: {fileID: 177540, guid: 69dfce71c987ee94ebd40421847e3c8e, type: 3}
   leveMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
