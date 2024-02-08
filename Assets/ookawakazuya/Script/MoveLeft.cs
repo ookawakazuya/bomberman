@@ -29,6 +29,10 @@ public class MoveLeft : MonoBehaviour
         {
             speed = 2;
         }
+        if(spawnmanager.count >= 50)
+        {
+            speed = 3;
+        }
     }
 
 //壊れないブロックや壊されなかったブロックを消す
