@@ -12,11 +12,13 @@ public class WallDestroy : MonoBehaviour
     public GameObject effectPrefab;
     public int breakcount;
     private Player player;
+    bool reloading;//硬い壁の爆発ロード時間
 
     private void Start()
     {
         breakcount = 0;
         player = GameObject.Find("Player").GetComponent<Player>();
+        reloading = false;
     }
     //爆発でブロックを消す
     public void OnTriggerEnter(Collider collider)
@@ -32,25 +34,13 @@ public class WallDestroy : MonoBehaviour
                 //player.ultpoint++;
             }
         }
-        else if (gameObject.name == "breakWall(Clone)")
-        {
-            //衝突したときに相手にExplosionタグが付いているとき
-            if (collider.CompareTag("Explosion"))
-            {
-                //1秒後に消滅
-                Destroy(gameObject);
-                //player.ultpoint++;
-            }
-        }
         //衝突したときに自信の名前がbreakWall+1だった場合
-        else if(gameObject.name == "breakWall+1(Clone)")
+        else if(gameObject.name == "breakWall+1" && !reloading)
         {
             //衝突したときに相手にExplosionタグが付いているとき
             if (collider.CompareTag("Explosion"))
             { 
-                //カウントを1追加する
-                breakcount++;
-                Debug.Log("+1");
+                StartCoroutine(Reload());
                 if(breakcount >= 2)
                 {
                     Destroy(gameObject);
@@ -63,5 +53,17 @@ public class WallDestroy : MonoBehaviour
         {   //このオブジェクトを消滅させる
             Destroy(gameObject, 2f);
         }
+    }
+
+    private IEnumerator Reload()
+    {
+        reloading = true;
+        Debug.Log("待機時間開始");
+        yield return new WaitForSeconds(2);
+
+        //カウントを1追加する
+        breakcount++;
+        Debug.Log("カウント+1");
+        reloading = false;
     }
 }
