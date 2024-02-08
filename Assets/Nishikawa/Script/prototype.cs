@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Players : MonoBehaviour
+public class prototype : MonoBehaviour
 {
     [SerializeField] GameObject bombPrefab;
     [SerializeField] float moveSpeed = 5f;
