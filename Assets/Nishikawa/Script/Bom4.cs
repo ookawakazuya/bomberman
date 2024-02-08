@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bom3 : MonoBehaviour
+public class Bom4 : MonoBehaviour
 {
     [SerializeField] GameObject explodePrefab; // 爆発エフェクトのプレハブ
     [SerializeField] LayerMask leveMask; // ステージのレイヤー
 
     private bool exploded = false; // すでに爆発している場合 = true
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,15 +43,6 @@ public class Bom3 : MonoBehaviour
         StartCoroutine(CreateExplosins(new Vector3(-1, 0, 1)));
         StartCoroutine(CreateExplosins(new Vector3(-1, 0, -1)));
         StartCoroutine(CreateExplosins(new Vector3(1, 0, -1)));
-        //四角
-        StartCoroutine(CreateExplosins(new Vector3(0.5f, 0, 1)));
-        StartCoroutine(CreateExplosins(new Vector3(-0.5f, 0, 1)));
-        StartCoroutine(CreateExplosins(new Vector3(-0.5f, 0, -1)));
-        StartCoroutine(CreateExplosins(new Vector3(0.5f, 0, -1)));
-        StartCoroutine(CreateExplosins(new Vector3(1, 0, 0.5f)));
-        StartCoroutine(CreateExplosins(new Vector3(-1, 0, 0.5f)));
-        StartCoroutine(CreateExplosins(new Vector3(-1, 0, -0.5f)));
-        StartCoroutine(CreateExplosins(new Vector3(1, 0, -0.5f)));
 
         Transform ColliderTransform = transform.Find("Collider");
         if (ColliderTransform != null)
@@ -73,7 +63,7 @@ public class Bom3 : MonoBehaviour
     {
 
         // 2マス分ループする
-        for (int i = 1; i < 3; i++)
+        for (int i = 1; i < 5; i++)
         {
             // ブロックとの当たり判定の結果を格納する変数
             RaycastHit hit;
