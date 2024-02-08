@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
+    [SerializeField] GameObject ultimate;
     public bool alive = true;
-
+    private bool ult;
+    public int ultpoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ult = false;
     }
 
     void UpdateAlive()
@@ -36,12 +39,25 @@ public class Player : MonoBehaviour
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
 
+        //ウルトポイントが20以上で発動待機状態
+        if(ultpoint >= 20)
+        {
+            ult = true;
+        }
+
+        //エンターキー
+        if (/*ult && */Input.GetKeyDown(KeyCode.Return))
+        {
+            Ultimate();
+        }
+
         //ボムの生成
         if (Input.GetKeyDown(KeyCode.Space))
         {
             DropBomb();
         }
     }
+
     void Dead()
     {
         Destroy(gameObject);
@@ -88,6 +104,20 @@ public class Player : MonoBehaviour
         if (bombs)
         {
             Instantiate(bombs,pos,bombs.transform.rotation);
+        }
+    }
+
+    private void Ultimate()
+    {
+        var pos = new Vector3
+        (
+            Mathf.RoundToInt(transform.position.x),
+            bombs.transform.position.y,
+            Mathf.RoundToInt(transform.position.z)
+        );
+        if (ultimate)
+        {
+            Instantiate(ultimate, pos, ultimate.transform.rotation);
         }
     }
 }
