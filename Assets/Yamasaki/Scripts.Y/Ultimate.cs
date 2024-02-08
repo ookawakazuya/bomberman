@@ -8,6 +8,7 @@ public class Ultimate : MonoBehaviour
     private void Ult()
     {
         Instantiate(ultimatePrefab, transform.position, Quaternion.identity);
+        GetComponent<MeshRenderer>().enabled = false;
         StartCoroutine(CreateUltimate(Vector3.right));
         Destroy(gameObject, 0.3f);
     }
@@ -31,12 +32,12 @@ public class Ultimate : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("Ult", 3f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
+    [SerializeField] GameObject ultimate;
     public bool alive = true;
     private bool ult;
     public int ultpoint;
@@ -45,7 +46,7 @@ public class Player : MonoBehaviour
         }
 
         //エンターキー
-        if (ult && Input.GetKeyDown(KeyCode.Return))
+        if (/*ult && */Input.GetKeyDown(KeyCode.Return))
         {
             Ultimate();
         }
@@ -55,11 +56,6 @@ public class Player : MonoBehaviour
         {
             DropBomb();
         }
-    }
-
-    private void Ultimate()
-    {
-
     }
 
     void Dead()
@@ -108,6 +104,20 @@ public class Player : MonoBehaviour
         if (bombs)
         {
             Instantiate(bombs,pos,bombs.transform.rotation);
+        }
+    }
+
+    private void Ultimate()
+    {
+        var pos = new Vector3
+        (
+            Mathf.RoundToInt(transform.position.x),
+            bombs.transform.position.y,
+            Mathf.RoundToInt(transform.position.z)
+        );
+        if (ultimate)
+        {
+            Instantiate(ultimate, pos, ultimate.transform.rotation);
         }
     }
 }
