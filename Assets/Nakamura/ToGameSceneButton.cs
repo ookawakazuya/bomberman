@@ -8,7 +8,7 @@ public class ToGameSceneButton : MonoBehaviour
     // Start is called before the first frame update
         public void OnClickToGameSceneButton()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("meingame");
     }
     
 }

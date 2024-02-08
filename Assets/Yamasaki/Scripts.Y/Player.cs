@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -61,6 +62,12 @@ public class Player : MonoBehaviour
     void Dead()
     {
         Destroy(gameObject);
+        Invoke("Deray", 2.0f);
+    }
+
+    private void Deray()
+    {
+        SceneManager.LoadScene("result");//ƒŠƒUƒ‹ƒg‰æ–Ê‚ÖˆÚ“®
     }
 
     private void OnCollisionEnter(Collision collision)

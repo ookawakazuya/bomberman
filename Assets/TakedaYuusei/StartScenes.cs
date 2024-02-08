@@ -20,6 +20,7 @@ public class StartScenes : MonoBehaviour
 
     public void OnRetry()
     {
-        SceneManager.LoadScene("startscene");
+        Debug.Log("aaaa");
+        SceneManager.LoadScene("title");
     }
 }
