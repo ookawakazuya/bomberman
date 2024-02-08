@@ -25,13 +25,14 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
+        //カウントが19以下の処理
         if (player.alive == true)
         {
             if(count <= 19) 
             { 
                 //オブジェクトが生成される位置
                 int number = Random.Range(0, Prefabs.Length);
-                Instantiate(Prefabs[number], new Vector3(-21, 0, 0), Prefabs[number].transform.rotation);
+                Instantiate(Prefabs[number], new Vector3(-21, -1, 0), Prefabs[number].transform.rotation);
                 count++;
             }
             //配列をランダムな順で生成する
@@ -50,18 +51,18 @@ public class SpawnManager : MonoBehaviour
                 int number10 = Random.Range(0, Prefabs2.Length);
                 int number11 = Random.Range(0, Prefabs2.Length);
                 int number12 = Random.Range(0, Prefabs2.Length);
-                Instantiate(Prefabs2[number1],new Vector3(-21,1,4),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number2],new Vector3(-21,1,3),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number3],new Vector3(-21,1,2),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number4],new Vector3(-21,1,1),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number5],new Vector3(-21,1,0),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number6],new Vector3(-21,1,-1),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number7],new Vector3(-21,1,-2),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number8],new Vector3(-21,1,-3),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number9],new Vector3(-21,1,-4),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number10],new Vector3(-21,1,-5),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number11],new Vector3(-21,1,-6),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number12],new Vector3(-21,1,-7),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number1],new Vector3(-21,0,4),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number2],new Vector3(-21,0,3),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number3],new Vector3(-21,0,2),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number4],new Vector3(-21,0,1),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number5],new Vector3(-21,0,0),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number6],new Vector3(-21,0,-1),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number7],new Vector3(-21,0,-2),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number8],new Vector3(-21,0,-3),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number9],new Vector3(-21,0,-4),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number10],new Vector3(-21,0,-5),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number11],new Vector3(-21,0,-6),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number12],new Vector3(-21,0,-7),Prefabs2[number].transform.rotation);
                 count++;
             }
         }
@@ -72,12 +73,12 @@ public class SpawnManager : MonoBehaviour
         {
             StartCoroutine("Level2");
         }
-        if (count >= 30)
+        else if(count == 30)
         {
-            startDelay = 0;
-            repeatRate = 3;
+            StartCoroutine("Level3");
         }
     }
+    //レベル分けをするテキスト
     IEnumerator Level1()
     {
         yield return new WaitForSeconds(1.0f);
@@ -89,5 +90,11 @@ public class SpawnManager : MonoBehaviour
         Leveltext.text = "";
         yield return new WaitForSeconds(0.5F);
         Leveltext.text = "Lvel2";
+    }
+    IEnumerator Level3()
+    {
+        Leveltext.text = "";
+        yield return new WaitForSeconds(0.5f);
+        Leveltext.text = "Level3";
     }
 }
