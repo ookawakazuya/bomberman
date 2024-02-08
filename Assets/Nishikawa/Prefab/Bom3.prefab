@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7341800533102968781}
   - component: {fileID: 1076756807606817112}
   - component: {fileID: 7888632557331728822}
-  - component: {fileID: -1508249257867125105}
+  - component: {fileID: 6396578772910753404}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bom3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-1508249257867125105
+--- !u!114 &6396578772910753404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3869253665498228344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29eafe040d1cb394585d2310db9f428c, type: 3}
+  m_Script: {fileID: 11500000, guid: ce758710a86a12c4d8c41800c98043ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explodePrefab: {fileID: 177540, guid: 69dfce71c987ee94ebd40421847e3c8e, type: 3}
