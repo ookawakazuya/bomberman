@@ -5,17 +5,22 @@ using UnityEngine;
 public class Ultimate : MonoBehaviour
 {
     public GameObject ultimatePrefab;
+
+    void Start()
+    {
+        Invoke("Ult", 3f);
+    }
+
     private void Ult()
     {
         Instantiate(ultimatePrefab, transform.position, Quaternion.identity);
-        GetComponent<MeshRenderer>().enabled = false;
         StartCoroutine(CreateUltimate(Vector3.right));
-        Destroy(gameObject, 0.3f);
+        //Destroy(gameObject, 0.3f);
     }
 
     private IEnumerator CreateUltimate(Vector3 direction)
     {
-        for (int i = 1; i < 20;  i++)
+        for (int i = 1; i < 10;  i++)
         {
             Instantiate
                 (
@@ -23,19 +28,18 @@ public class Ultimate : MonoBehaviour
                 transform.position + (i * direction),
                 ultimatePrefab.transform.rotation
                 );
-
+            Debug.Log($"{i}");
             // 0.5 •b‘Ò‚Á‚Ä‚©‚çAŽŸ‚Ìƒ}ƒX‚É”š•—‚ðL‚°‚é
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
+
+            if(i == 9)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        Invoke("Ult", 3f);
-    }
 
-    // Update is called once per frame
     void Update()
     {
 

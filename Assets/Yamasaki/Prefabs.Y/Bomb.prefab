@@ -86,7 +86,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 7186208284856314618, guid: a7d9a7d3634f5e440bc9d72b18278969, type: 3}
   levelMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!54 &2184661565100986532
 Rigidbody:
   m_ObjectHideFlags: 0

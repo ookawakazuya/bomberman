@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] GameObject bombs;
     [SerializeField] GameObject ultimate;
+    public Rigidbody rb;
     public bool alive = true;
     private bool ult;
     public int ultpoint;
@@ -21,22 +23,26 @@ public class Player : MonoBehaviour
 
     void UpdateAlive()
     {
-
+        rb = GetComponent<Rigidbody>();
         //player‚Ì“®‚«
         if (Input.GetKey(KeyCode.A))
         {
+            //rb.AddForce(-speed, 0, 0);
             transform.position -= transform.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
+            //rb.AddForce(speed, 0, 0);
             transform.position += transform.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.W))
         {
+            //rb.AddForce(0, 0, speed);
             transform.position += transform.forward * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
+            //rb.AddForce(0, 0, -speed);
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
 
