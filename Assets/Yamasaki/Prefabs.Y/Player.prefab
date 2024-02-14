@@ -645,8 +645,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8015703294495410110}
+  - component: {fileID: -629272485839754747}
   m_Layer: 0
-  m_Name: Bombman 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,8 +661,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7524301697146504578}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -60, y: 0.5, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -677,7 +678,24 @@ Transform:
   - {fileID: 3366652564929875244}
   - {fileID: 5052169699600385010}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &-629272485839754747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524301697146504578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d096b8fab90a4a4c864119233588955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  bombs: {fileID: 3869253665498228344, guid: 098557977090acf48ac99818e4b24332, type: 3}
+  ultimate: {fileID: 0}
+  alive: 1
+  ultpoint: 0
 --- !u!1 &8379458687342508486
 GameObject:
   m_ObjectHideFlags: 0
