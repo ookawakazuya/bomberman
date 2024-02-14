@@ -83,10 +83,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b757832b315d6db4e80808211009231d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 7186208284856314618, guid: a7d9a7d3634f5e440bc9d72b18278969, type: 3}
+  explosionPrefab: {fileID: 177540, guid: 69dfce71c987ee94ebd40421847e3c8e, type: 3}
   levelMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
 --- !u!54 &2184661565100986532
 Rigidbody:
   m_ObjectHideFlags: 0
