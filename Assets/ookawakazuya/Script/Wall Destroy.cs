@@ -48,6 +48,11 @@ public class WallDestroy : MonoBehaviour
                 }
             }
         }
+        // Ultimateの壁の処理
+        if (collider.gameObject.tag == "Ultimate")
+        {
+            Destroy(gameObject);
+        }
         //衝突したときに相手にDestroyWallタグが付いているときに
         if (collider.gameObject.tag == "DestroyWall")
         {   //このオブジェクトを消滅させる
