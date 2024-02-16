@@ -10,6 +10,7 @@ public class ScoreManeger : MonoBehaviour
     public static int score_num = 0; // スコア変数
     float time;
     bool alive = true;
+    [SerializeField] protected Player player;
 
 
 
@@ -29,7 +30,7 @@ public class ScoreManeger : MonoBehaviour
             score_num += 300;
         }*/
 
-        if (score_num >= 500) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
+        if (player.alive == false) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
         {
             RankingManager.instance.AddScore(score_num);
             Invoke("Deray", 2.0f);//スコアが加算されるまでの空白時間
@@ -40,7 +41,7 @@ public class ScoreManeger : MonoBehaviour
         if (time >= 1)//スコア加算
         {
             time = 0;
-            score_num += 100;
+            score_num += 0;
 
         }
 

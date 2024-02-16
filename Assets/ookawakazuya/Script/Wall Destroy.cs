@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WallDestroy : MonoBehaviour
 {
@@ -13,12 +14,33 @@ public class WallDestroy : MonoBehaviour
     public int breakcount;
     private Player player;
     bool reloading;//硬い壁の爆発ロード時間
+    private bool scoreget;//0216
+    private bool scoreget2;//0216
+    [SerializeField] protected ScoreManeger scoreManeger;//0216
 
     private void Start()
     {
-        breakcount = 0;
+        breakcount = 0;  
+        scoreget = false;//0216
+        scoreget2 = false;//0216
         player = GameObject.Find("Player").GetComponent<Player>();
         reloading = false;
+    }
+
+    private void Update()
+    {    
+        if (scoreget)//0216
+        {
+            ScoreManeger.score_num += 300;
+            scoreget = false;
+        }
+
+        if (scoreget2)//0216
+        {
+            ScoreManeger.score_num += 500;
+            scoreget2 = false;
+        }
+
     }
     //爆発でブロックを消す
     public void OnTriggerEnter(Collider collider)
@@ -29,8 +51,10 @@ public class WallDestroy : MonoBehaviour
             //衝突したときに相手にExplosionタグが付いているとき
             if (collider.CompareTag("Explosion"))
             {
+                scoreget = true;//0216
+
                 //1秒後に消滅
-                Destroy(gameObject);
+                Destroy(gameObject,0.005f);//0216
                 //player.ultpoint++;
             }
         }
@@ -43,8 +67,10 @@ public class WallDestroy : MonoBehaviour
                 StartCoroutine(Reload());
                 if(breakcount >= 2)
                 {
-                    Destroy(gameObject);
-                    //player.ultpoint++;
+                    scoreget2 = true;//0216
+
+                    Destroy(gameObject,0.005f);//0216
+                    //player.ultpoint++;               
                 }
             }
         }
@@ -71,4 +97,5 @@ public class WallDestroy : MonoBehaviour
         Debug.Log("カウント+1");
         reloading = false;
     }
+
 }
