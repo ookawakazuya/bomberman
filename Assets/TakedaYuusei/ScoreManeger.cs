@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManeger : MonoBehaviour
 {
+    [SerializeField] protected Player player;
     public GameObject score_object = null; // Text
     public static int score_num = 0; // スコア変数
     float time;
@@ -29,7 +30,7 @@ public class ScoreManeger : MonoBehaviour
             score_num += 300;
         }*/
 
-        if (score_num >= 500) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
+        if (player.alive == false) //collision.gameObject.name == "LimitWall" 合わせるとき条件式を(プレイヤーが死んだらにする)
         {
             RankingManager.instance.AddScore(score_num);
             Invoke("Deray", 2.0f);//スコアが加算されるまでの空白時間

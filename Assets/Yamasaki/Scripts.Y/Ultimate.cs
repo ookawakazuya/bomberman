@@ -20,7 +20,7 @@ public class Ultimate : MonoBehaviour
 
     private IEnumerator CreateUltimate(Vector3 direction)
     {
-        for (int i = 1; i < 10;  i++)
+        for (int i = 1; i < 20;  i++)
         {
             Instantiate
                 (
@@ -29,7 +29,7 @@ public class Ultimate : MonoBehaviour
                 ultimatePrefab.transform.rotation
                 );
             Debug.Log($"{i}");
-            // 0.5 •b‘Ò‚Á‚Ä‚©‚çAŽŸ‚Ìƒ}ƒX‚É”š•—‚ðL‚°‚é
+            // 0.2 •b‘Ò‚Á‚Ä‚©‚çAŽŸ‚Ìƒ}ƒX‚É”š•—‚ðL‚°‚é
             yield return new WaitForSeconds(0.2f);
 
             if(i == 9)
