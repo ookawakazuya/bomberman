@@ -32,12 +32,14 @@ public class WallDestroy : MonoBehaviour
         {
             ScoreManeger.score_num += 300;
             scoreget = false;
+            player.ultpoint++;
         }
 
         if (scoreget2)
         {
             ScoreManeger.score_num += 500;
             scoreget2 = false;
+            player.ultpoint++;
         }
     }
     //爆発でブロックを消す
@@ -52,7 +54,6 @@ public class WallDestroy : MonoBehaviour
                 scoreget = true;
                 //1秒後に消滅
                 Destroy(gameObject,0.005f);
-                player.ultpoint++;
             }
         }
         //衝突したときに自信の名前がbreakWall+1だった場合
@@ -67,7 +68,6 @@ public class WallDestroy : MonoBehaviour
                     scoreget2 = true;
 
                     Destroy(gameObject,0.005f);
-                    player.ultpoint++;
                 }
             }
         }
