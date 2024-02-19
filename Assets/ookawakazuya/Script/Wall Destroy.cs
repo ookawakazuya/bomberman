@@ -13,12 +13,32 @@ public class WallDestroy : MonoBehaviour
     public int breakcount;
     private Player player;
     bool reloading;//硬い壁の爆発ロード時間
+    private bool scoreget;
+    private bool scoreget2;
+    [SerializeField] protected ScoreManeger scoreManeger;
 
     private void Start()
     {
         breakcount = 0;
+        scoreget = false;
+        scoreget2 = false;
         player = GameObject.Find("Player").GetComponent<Player>();
         reloading = false;
+    }
+
+    private void Update()
+    {
+        if (scoreget)
+        {
+            ScoreManeger.score_num += 300;
+            scoreget = false;
+        }
+
+        if (scoreget2)
+        {
+            ScoreManeger.score_num += 500;
+            scoreget2 = false;
+        }
     }
     //爆発でブロックを消す
     public void OnTriggerEnter(Collider collider)
@@ -29,9 +49,10 @@ public class WallDestroy : MonoBehaviour
             //衝突したときに相手にExplosionタグが付いているとき
             if (collider.CompareTag("Explosion"))
             {
+                scoreget = true;
                 //1秒後に消滅
-                Destroy(gameObject);
-                //player.ultpoint++;
+                Destroy(gameObject,0.005f);
+                player.ultpoint++;
             }
         }
         //衝突したときに自信の名前がbreakWall+1だった場合
@@ -43,8 +64,10 @@ public class WallDestroy : MonoBehaviour
                 StartCoroutine(Reload());
                 if(breakcount >= 2)
                 {
-                    Destroy(gameObject);
-                    //player.ultpoint++;
+                    scoreget2 = true;
+
+                    Destroy(gameObject,0.005f);
+                    player.ultpoint++;
                 }
             }
         }

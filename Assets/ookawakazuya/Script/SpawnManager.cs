@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] Prefabs;
     public GameObject[] Prefabs2;
-    private float startDelay=2;
+    private float startDelay=0;
     private float repeatRate=5;
     private Player player;
     public int count;
@@ -21,7 +21,6 @@ public class SpawnManager : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>();
         StartCoroutine("Level1");
     }
-
 
     void SpawnObstacle()
     {
@@ -77,6 +76,13 @@ public class SpawnManager : MonoBehaviour
         {
             StartCoroutine("Level3");
         }
+        else if (count == 50)
+        {
+            CancelInvoke();
+            InvokeRepeating("SpawnObstacle", 3, 2);
+            count = 51;
+            StartCoroutine("LevelEndless");
+        }
     }
     //レベル分けをするテキスト
     IEnumerator Level1()
@@ -96,5 +102,11 @@ public class SpawnManager : MonoBehaviour
         Leveltext.text = "";
         yield return new WaitForSeconds(0.5f);
         Leveltext.text = "Level3";
+    }
+    IEnumerator LevelEndless()
+    {
+        Leveltext.text = "";
+        yield return new WaitForSeconds(0.5f);
+        Leveltext.text = "LevelEndless";
     }
 }
