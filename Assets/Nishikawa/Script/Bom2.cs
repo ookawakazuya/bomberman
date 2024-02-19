@@ -97,5 +97,13 @@ public class Bom2 : MonoBehaviour
             // ”š”­‚·‚é
             Explode();
         }
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            // 2d‚É”š”­ˆ—‚ªÀs‚³‚ê‚È‚¢‚æ‚¤‚É‚·‚Å‚É”š”­ˆ—‚ªÀs‚³‚ê‚Ä‚¢‚éê‡‚Í~‚ß‚é
+            CancelInvoke("Explode");
+
+            // ”š”­‚·‚é
+            Explode();
+        }
     }
 }
