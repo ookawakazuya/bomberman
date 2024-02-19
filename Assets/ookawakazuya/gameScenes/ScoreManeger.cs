@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScoreManeger : MonoBehaviour
 {
     public GameObject score_object = null; // Text
-    public static int score_num = 0; // スコア変数
+    public static int score_num; // スコア変数
     float time;
     bool alive = true;
     [SerializeField] protected Player player;
@@ -16,7 +16,7 @@ public class ScoreManeger : MonoBehaviour
 
     void Start()
     {
-        
+        score_num = 0;
     }
 
     private void AliveScore()
@@ -41,7 +41,7 @@ public class ScoreManeger : MonoBehaviour
         if (time >= 1)//スコア加算
         {
             time = 0;
-            score_num += 0;
+            score_num += 100;
 
         }
 
