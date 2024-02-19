@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectPrefab: {fileID: 0}
   breakcount: 0
+  scoreManeger: {fileID: 0}
 --- !u!114 &-5833197216911692911
 MonoBehaviour:
   m_ObjectHideFlags: 0
