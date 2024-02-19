@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29eafe040d1cb394585d2310db9f428c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1235149711390304984, guid: 73a788c3c18c7eb47a75907afc8445b2, type: 3}
   explodePrefab: {fileID: 177540, guid: 69dfce71c987ee94ebd40421847e3c8e, type: 3}
   leveMask:
     serializedVersion: 2

@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject ultimate;
     public Rigidbody rb;
     public bool alive = true;
+    /*public int numbomb;
+    private bool canbombs;*/
     private bool ult;
     public int ultpoint;
 
@@ -19,10 +21,21 @@ public class Player : MonoBehaviour
     void Start()
     {
         ult = false;
+        /*canbombs = true;
+        numbomb = 0;*/
     }
 
     void UpdateAlive()
     {
+        /*if(numbomb >= 3)
+        {
+            canbombs = false;
+
+        }
+        else
+        {
+            canbombs = true;
+        }*/
         rb = GetComponent<Rigidbody>();
         //playerの動き
         if (Input.GetKey(KeyCode.A))
@@ -53,15 +66,16 @@ public class Player : MonoBehaviour
         }
 
         //エンターキー
-        if (/*ult && */Input.GetKeyDown(KeyCode.Return))
+        if (ult && Input.GetKeyDown(KeyCode.Return))
         {
             Ultimate();
         }
 
         //ボムの生成
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (/*canbombs && */Input.GetKeyDown(KeyCode.Space))
         {
             DropBomb();
+            //numbomb += 1;
         }
     }
 
@@ -96,6 +110,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("title");
+        }
+
         if (alive)
         {
             UpdateAlive();

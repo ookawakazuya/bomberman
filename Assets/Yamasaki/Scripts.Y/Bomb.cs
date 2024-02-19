@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    //[SerializeField] protected Player player;
     public GameObject explosionPrefab;
     public LayerMask levelMask;
     private bool exploded = false; // ‚·‚Å‚É”š”­‚µ‚Ä‚¢‚éê‡ true
@@ -25,6 +26,7 @@ public class Bomb : MonoBehaviour
         // ”š”­‚µ‚½
         exploded = true;
 
+
         // ”š•—‚ğL‚°‚é
         StartCoroutine(CreateExplosions(Vector3.forward)); // ã‚ÉL‚°‚é
         StartCoroutine(CreateExplosions(Vector3.right)); // ‰E‚ÉL‚°‚é
@@ -34,6 +36,8 @@ public class Bomb : MonoBehaviour
         // 0.3 •bŒã‚É”ñ•\¦‚É‚µ‚½”š’e‚ğíœ
         Destroy(gameObject, 0.3f);
 
+        //ƒ{ƒ€‚ÌŒÂ”Œ¸‚Á‚½
+        //player.numbomb -= 1;
     }
 
     // ”š•—‚ğL‚°‚é
