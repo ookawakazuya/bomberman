@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -5416353334614596287}
   - component: {fileID: 2339927024421129350}
   - component: {fileID: 2162536638951777190}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall N.5
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnbreakableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -221,6 +225,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: breakWall
       objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -283,6 +291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: breakWall
       objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -304,6 +316,10 @@ PrefabInstance:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
       value: UnbreakableWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -407,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: breakWall
       objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -468,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
       value: breakWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -531,6 +555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: breakWall
       objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -552,6 +580,10 @@ PrefabInstance:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
       value: 'UnbreakableWall '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -615,6 +647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnbreakableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -677,6 +713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnbreakableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -738,6 +778,10 @@ PrefabInstance:
     - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_Name
       value: UnbreakableWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206548939947300005, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5384085204522393149, guid: fc49227189c521642881cd62dcdf1d55, type: 3}
       propertyPath: m_LocalPosition.x
@@ -840,6 +884,10 @@ PrefabInstance:
     - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
       propertyPath: m_Name
       value: breakWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: fe8767f099698b84b9afd2e98bf73067, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

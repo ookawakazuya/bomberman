@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5015796232020942680}
   - component: {fileID: 6319922518564639444}
   - component: {fileID: 5695623425348095730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall N.10
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +147,10 @@ PrefabInstance:
     - target: {fileID: 9219505862225765368, guid: 61386c6560147f4418996cca5ea2fc87, type: 3}
       propertyPath: m_Name
       value: breakWall+1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9219505862225765368, guid: 61386c6560147f4418996cca5ea2fc87, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
