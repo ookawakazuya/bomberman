@@ -38,22 +38,22 @@ public class Player : MonoBehaviour
         }*/
         rb = GetComponent<Rigidbody>();
         //player‚Ì“®‚«
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.S))
         {
             //rb.AddForce(-speed, 0, 0);
             transform.position -= transform.right * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W))
         {
             //rb.AddForce(speed, 0, 0);
             transform.position += transform.right * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.A))
         {
             //rb.AddForce(0, 0, speed);
             transform.position += transform.forward * speed * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.D))
         {
             //rb.AddForce(0, 0, -speed);
             transform.position -= transform.forward * speed * Time.deltaTime;

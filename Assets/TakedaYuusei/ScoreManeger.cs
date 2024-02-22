@@ -35,6 +35,7 @@ public class ScoreManeger : MonoBehaviour
             RankingManager.instance.AddScore(score_num);
             Invoke("Deray", 2.0f);//スコアが加算されるまでの空白時間
             alive = false;
+            Debug.Log("シーン切り替え");
 
         }
 
