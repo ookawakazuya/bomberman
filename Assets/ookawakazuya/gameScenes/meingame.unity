@@ -1722,6 +1722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3674424512268548624, guid: 5fe9ef7344d5d3843a3fbcef0130b932, type: 3}
+      propertyPath: bombs
+      value: 
+      objectReference: {fileID: 124052, guid: 6291891f72f724c4eae6be6052e78735, type: 3}
     - target: {fileID: 8440131551893415483, guid: 5fe9ef7344d5d3843a3fbcef0130b932, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5

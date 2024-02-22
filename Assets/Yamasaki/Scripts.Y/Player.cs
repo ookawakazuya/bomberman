@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     private bool canbombs;*/
     private bool ult;
     public int ultpoint;
+    private Transform myTransform;
+    private bool canDropBombs = true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
         ult = false;
         /*canbombs = true;
         numbomb = 0;*/
+        myTransform = transform;
     }
 
     void UpdateAlive()
@@ -74,7 +77,7 @@ public class Player : MonoBehaviour
         }
 
         //ƒ{ƒ€‚Ì¶¬
-        if (/*canbombs && */Input.GetKeyDown(KeyCode.Space))
+        if (canDropBombs && Input.GetKeyDown(KeyCode.Space))
         {
             DropBomb();
             //numbomb += 1;
@@ -126,19 +129,38 @@ public class Player : MonoBehaviour
             Dead();
         }
     }
+    private int maxBombs = 3;
+    private int currentBombs = 0;
 
     private void DropBomb()
     {
-        var pos = new Vector3
+        /*var pos = new Vector3
         (
             Mathf.RoundToInt(transform.position.x),
             bombs.transform.position.y,
             Mathf.RoundToInt(transform.position.z)
-         );
+         );*/
+        if (currentBombs >= maxBombs) return;
+        Debug.Log("+");
         if (bombs)
         {
-            Instantiate(bombs,pos,bombs.transform.rotation);
+           //Instantiate(bombs,pos,ombs.transform.rotation);
+            StartCoroutine(BombControl());
         }
+
+    }
+    IEnumerator BombControl()
+    {
+        GameObject bomb = Instantiate(bombs, myTransform.position, bombs.transform.rotation);
+        currentBombs++;
+
+        while (bomb != null)
+        {
+            yield return null;
+
+        }
+
+        currentBombs--;
     }
 
     private void Ultimate()
