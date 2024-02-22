@@ -6,18 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: "Assets/TakedaYuusei/GameScen\uFF08\u4EEE\uFF09.unity"
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/TakedaYuusei/result.unity
-    guid: 029c4b6edb75fa149b9034b747287a99
-  - enabled: 1
-    path: Assets/Nakamura/GameScene.unity
-    guid: 757ad1a2efc48b0449e76c57416f7013
+    path: Assets/Nakamura/title.unity
+    guid: 55a20a1d31d44e041838951f4429b977
   - enabled: 1
     path: Assets/ookawakazuya/gameScenes/meingame.unity
     guid: 648b4f8b794ce2642905a97089299524
   - enabled: 1
-    path: Assets/Nakamura/title.unity
-    guid: 55a20a1d31d44e041838951f4429b977
+    path: Assets/TakedaYuusei/result.unity
+    guid: 029c4b6edb75fa149b9034b747287a99
   m_configObjects: {}
