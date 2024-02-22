@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         }
 
         //ウルトポイントが20以上で発動待機状態
-        if(ultpoint >= 20)
+        if(ultpoint >= 30)
         {
             ult = true;
         }
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         if (ult && Input.GetKeyDown(KeyCode.Return))
         {
             Ultimate();
-            ultpoint -= 20;
+            ultpoint -= 30;
         }
 
         //ボムの生成
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
             //numbomb += 1;
         }
 
-        ult_text.text = "アルティメットポイント:" + ultpoint + "/20";
+        ult_text.text = "アルティメットポイント:" + ultpoint + "/30";
     }
 
     public int getultpoint()

@@ -134,7 +134,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.41, y: 0.5, z: 38.2}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6208188718675940678}
@@ -163,11 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  bombs: {fileID: 3869253665498228344, guid: 098557977090acf48ac99818e4b24332, type: 3}
+  bombs:
+  - {fileID: 124052, guid: 6291891f72f724c4eae6be6052e78735, type: 3}
+  - {fileID: 124052, guid: 974c5c850d3482c4da528e943d400c1a, type: 3}
+  - {fileID: 124052, guid: 09dd09a5035e4be449e1dfa5bcda7980, type: 3}
+  - {fileID: 1540070646423646149, guid: 23b20cb53538d424cb24e69993993108, type: 3}
   ultimate: {fileID: 7019491435063958301, guid: cf136d9318d7f2249bc1f4df7febb59f, type: 3}
   rb: {fileID: 0}
   alive: 1
   ultpoint: 0
+  ultimatepoint: {fileID: 0}
 --- !u!54 &4641202630940849851
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -214,10 +219,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.30423936
+  m_Height: 1.0068054
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.0019349258, y: 0.18863678, z: 0.043043774}
 --- !u!1 &1002401026683588388
 GameObject:
   m_ObjectHideFlags: 0
