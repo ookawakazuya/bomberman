@@ -14,7 +14,7 @@ public class Ultimate : MonoBehaviour
     private void Ult()
     {
         Instantiate(ultimatePrefab, transform.position, Quaternion.identity);
-        StartCoroutine(CreateUltimate(Vector3.right));
+        StartCoroutine(CreateUltimate(Vector3.back));
         //Destroy(gameObject, 0.3f);
     }
 

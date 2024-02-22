@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8514798477524918894}
   - component: {fileID: 5565848379529042353}
   - component: {fileID: 876638625034148438}
+  - component: {fileID: -7082552459703635560}
   m_Layer: 0
   m_Name: UltimateExplosion
   m_TagString: Ultimate
@@ -4937,6 +4938,27 @@ MonoBehaviour:
   radius: 2
   force: 2
   delay: 0
+--- !u!65 &-7082552459703635560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791724733184294296}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4593251713046356454
 GameObject:
   m_ObjectHideFlags: 0

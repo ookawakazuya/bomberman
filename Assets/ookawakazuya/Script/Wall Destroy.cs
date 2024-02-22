@@ -74,7 +74,7 @@ public class WallDestroy : MonoBehaviour
         // Ultimate‚Ì•Ç‚Ìˆ—
         if (collider.gameObject.tag == "Ultimate")
         {
-            Destroy(gameObject);
+            Destroy(gameObject,0.005f);
         }
         //Õ“Ë‚µ‚½‚Æ‚«‚É‘Šè‚ÉDestroyWallƒ^ƒO‚ª•t‚¢‚Ä‚¢‚é‚Æ‚«‚É
         if (collider.gameObject.tag == "DestroyWall")

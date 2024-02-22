@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
             { 
                 //オブジェクトが生成される位置
                 int number = Random.Range(0, Prefabs.Length);
-                Instantiate(Prefabs[number], new Vector3(-2, 0, -13), Prefabs[number].transform.rotation);
+                Instantiate(Prefabs[number], new Vector3(-2, 1.5f, -13), Prefabs[number].transform.rotation);
                 count++;
             }
             //配列をランダムな順で生成する
@@ -50,18 +50,18 @@ public class SpawnManager : MonoBehaviour
                 int number10 = Random.Range(0, Prefabs2.Length);
                 int number11 = Random.Range(0, Prefabs2.Length);
                 int number12 = Random.Range(0, Prefabs2.Length);
-                Instantiate(Prefabs2[number1],new Vector3(2,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number2],new Vector3(1,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number3],new Vector3(0,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number4],new Vector3(-1,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number5],new Vector3(-2,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number6],new Vector3(-3,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number7],new Vector3(-4,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number8],new Vector3(-5,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number9],new Vector3(-6,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number10],new Vector3(-7,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number11],new Vector3(-8,1,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number12],new Vector3(-9,1,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number1],new Vector3(2,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number2],new Vector3(1,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number3],new Vector3(0,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number4],new Vector3(-1,.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number5],new Vector3(-2,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number6],new Vector3(-3,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number7],new Vector3(-4,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number8],new Vector3(-5,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number9],new Vector3(-6,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number10],new Vector3(-7,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number11],new Vector3(-8,1.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number12],new Vector3(-9,1.5f,-13),Prefabs2[number].transform.rotation);
                 count++;
             }
         }

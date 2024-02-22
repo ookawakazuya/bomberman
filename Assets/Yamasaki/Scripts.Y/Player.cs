@@ -45,17 +45,14 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
-            //rb.AddForce(speed, 0, 0);
             transform.position += transform.right * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            //rb.AddForce(0, 0, speed);
             transform.position += transform.forward * speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            //rb.AddForce(0, 0, -speed);
             transform.position -= transform.forward * speed * Time.deltaTime;
         }
 
@@ -64,11 +61,16 @@ public class Player : MonoBehaviour
         {
             ult = true;
         }
+        else
+        {
+            ult = false;
+        }
 
         //エンターキー
         if (ult && Input.GetKeyDown(KeyCode.Return))
         {
             Ultimate();
+            ultpoint = 0;
         }
 
         //ボムの生成
