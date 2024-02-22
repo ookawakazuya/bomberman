@@ -1,7 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/TakedaYuusei.meta
 guid: 249ba8ccbcc6009449f85f539cc12a9b
 folderAsset: yes
 DefaultImporter:
+=======
+guid: c435bbb7b7c3de4449fa30c8b8ba07a2
+PrefabImporter:
+>>>>>>> Nishikawa:Assets/Nishikawa/Prefab/Cylinder.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

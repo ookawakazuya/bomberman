@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1549898790810223828}
   - component: {fileID: 5839989353119221472}
   - component: {fileID: -4465447136811931653}
-  - component: {fileID: 6899199476358777998}
+  - component: {fileID: 3144004080467748046}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6899199476358777998
+--- !u!114 &3144004080467748046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,8 +145,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3271266806823435875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 536822c060b68ae48b120dea3d510d5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 97616e52a4561d54ab68fad23f9f4927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 3869253665498228344, guid: 098557977090acf48ac99818e4b24332, type: 3}
+  bombPrefab: {fileID: 0}
   moveSpeed: 5

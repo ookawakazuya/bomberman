@@ -10,6 +10,7 @@ public class prototype : MonoBehaviour
     private Transform myTransform;
     private bool canDropBombs = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +39,35 @@ public class prototype : MonoBehaviour
         }
         if (canDropBombs && Input.GetKeyDown(KeyCode.Space))
         {
-            DropBomb();;
+            DropBomb();
         }
     }
 
+    private int maxBombs = 3;
+    private int currentBombs = 0;
+
     void DropBomb()
     {
+        if(currentBombs >= maxBombs) return;
+
         if (bombPrefab)
         {
-            Instantiate(bombPrefab, myTransform.position, bombPrefab.transform.rotation);
+            //Instantiate(bombPrefab, myTransform.position, bombPrefab.transform.rotation);
+            
+            StartCoroutine(BombControl());
         }
+    }
+
+    IEnumerator BombControl()
+    {
+        GameObject bomb = Instantiate(bombPrefab, myTransform.position, bombPrefab.transform.rotation);
+        currentBombs++;
+
+        while (bomb != null)
+        {
+            yield return null;
+        }
+
+        currentBombs--;
     }
 }
