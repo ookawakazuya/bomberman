@@ -55,7 +55,7 @@ public class Bom4 : MonoBehaviour
         }
 
         // 0.3•bŒã‚É”ñ•\¦‚É‚µ‚½”š’e‚ğíœ
-        Destroy(gameObject, 0.3f);
+        Destroy(gameObject, 0.1f);
     }
 
     // ”š•—‚ğL‚°‚é

@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
         if (ult && Input.GetKeyDown(KeyCode.Return))
         {
             Ultimate();
-            ultpoint = 0;
+            ultpoint -= 20;
         }
 
         //É{ÉÄÇÃê∂ê¨

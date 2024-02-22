@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] Prefabs;
     public GameObject[] Prefabs2;
     private float startDelay=0;
-    private float repeatRate=5;
+    private float repeatRate=7;
     private Player player;
     public int count;
     //private int number;
@@ -53,7 +53,7 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(Prefabs2[number1],new Vector3(2,1.5f,-13),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number2],new Vector3(1,1.5f,-13),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number3],new Vector3(0,1.5f,-13),Prefabs2[number].transform.rotation);
-                Instantiate(Prefabs2[number4],new Vector3(-1,.5f,-13),Prefabs2[number].transform.rotation);
+                Instantiate(Prefabs2[number4],new Vector3(-1,1.5f,-13),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number5],new Vector3(-2,1.5f,-13),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number6],new Vector3(-3,1.5f,-13),Prefabs2[number].transform.rotation);
                 Instantiate(Prefabs2[number7],new Vector3(-4,1.5f,-13),Prefabs2[number].transform.rotation);
@@ -75,14 +75,14 @@ public class SpawnManager : MonoBehaviour
         else if(count == 30)
         {
             CancelInvoke();
-            InvokeRepeating("SpawnObstacle", 3, 3);
+            InvokeRepeating("SpawnObstacle", 5, 5);
             count = 31;
             StartCoroutine("Level3");
         }
         else if (count == 50)
         {
             CancelInvoke();
-            InvokeRepeating("SpawnObstacle", 2, 2);
+            InvokeRepeating("SpawnObstacle", 3, 3);
             count = 51;
             StartCoroutine("LevelEndless");
         }
