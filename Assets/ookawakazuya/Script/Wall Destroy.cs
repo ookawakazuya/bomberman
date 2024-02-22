@@ -63,7 +63,7 @@ public class WallDestroy : MonoBehaviour
             if (collider.CompareTag("Explosion"))
             { 
                 StartCoroutine(Reload());
-                if(breakcount >= 2)
+                if(breakcount == 1)
                 {
                     scoreget2 = true;
 
