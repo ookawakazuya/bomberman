@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 888888472989363822}
   - component: {fileID: 7045811279831082831}
   - component: {fileID: 8901765038017898018}
-  - component: {fileID: -2653238159025719458}
   - component: {fileID: 1638003426223209577}
+  - component: {fileID: 3123878941548776251}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -123,20 +123,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2653238159025719458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 340130134764727371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 536822c060b68ae48b120dea3d510d5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombPrefab: {fileID: 0}
-  moveSpeed: 5
 --- !u!54 &1638003426223209577
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,6 +150,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3123878941548776251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340130134764727371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97616e52a4561d54ab68fad23f9f4927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 0}
+  moveSpeed: 5
 --- !u!1 &861582622627359753
 GameObject:
   m_ObjectHideFlags: 0
