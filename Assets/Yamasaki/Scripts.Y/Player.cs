@@ -8,16 +8,20 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] GameObject bombs;
+    [SerializeField] GameObject[] bombs;
     [SerializeField] GameObject ultimate;
     public Rigidbody rb;
     public bool alive = true;
     /*public int numbomb;
     private bool canbombs;*/
     private bool ult;
-    public int ultpoint;
+    public  int ultpoint;
     private Transform myTransform;
     private bool canDropBombs = true;
+
+    public GameObject ultimatepoint = null; // Text
+    
+   
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,8 @@ public class Player : MonoBehaviour
 
     void UpdateAlive()
     {
+        Text ult_text = ultimatepoint.GetComponent<Text>();
+
         /*if(numbomb >= 3)
         {
             canbombs = false;
@@ -82,6 +88,13 @@ public class Player : MonoBehaviour
             DropBomb();
             //numbomb += 1;
         }
+
+        ult_text.text = "アルティメットポイント:" + ultpoint + "/20";
+    }
+
+    public int getultpoint()
+    {
+        return ultpoint;
     }
 
     void Dead()
@@ -142,7 +155,7 @@ public class Player : MonoBehaviour
          );*/
         if (currentBombs >= maxBombs) return;
         Debug.Log("+");
-        if (bombs)
+        if (bombs[BombType.type])
         {
            //Instantiate(bombs,pos,ombs.transform.rotation);
             StartCoroutine(BombControl());
@@ -151,7 +164,7 @@ public class Player : MonoBehaviour
     }
     IEnumerator BombControl()
     {
-        GameObject bomb = Instantiate(bombs, myTransform.position, bombs.transform.rotation);
+        GameObject bomb = Instantiate(bombs[BombType.type], myTransform.position, bombs[BombType.type].transform.rotation);
         currentBombs++;
 
         while (bomb != null)
@@ -168,7 +181,7 @@ public class Player : MonoBehaviour
         var pos = new Vector3
         (
             Mathf.RoundToInt(transform.position.x),
-            bombs.transform.position.y,
+            bombs[BombType.type].transform.position.y,
             Mathf.RoundToInt(transform.position.z)
         );
         if (ultimate)

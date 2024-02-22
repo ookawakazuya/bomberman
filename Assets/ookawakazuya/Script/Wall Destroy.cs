@@ -30,14 +30,14 @@ public class WallDestroy : MonoBehaviour
     {
         if (scoreget)
         {
-            ScoreManeger.score_num += 300;
+            ScoreManeger.score_num += 50;
             scoreget = false;
             player.ultpoint++;
         }
 
         if (scoreget2)
         {
-            ScoreManeger.score_num += 500;
+            ScoreManeger.score_num += 100;
             scoreget2 = false;
             player.ultpoint++;
         }

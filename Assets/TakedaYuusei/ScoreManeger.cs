@@ -16,7 +16,7 @@ public class ScoreManeger : MonoBehaviour
 
     void Start()
     {
-        
+        score_num = 0;
     }
 
     private void AliveScore()
